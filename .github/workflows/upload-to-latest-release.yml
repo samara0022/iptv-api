@@ -9,6 +9,10 @@ permissions:
 jobs:
   build-and-upload:
     runs-on: windows-latest
+    # 添加以下三行代码
+    permissions:
+      contents: write  # 赋予写入仓库内容的权限
+      
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
